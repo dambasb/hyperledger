@@ -1,0 +1,210 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20180509.122619.22914.001.txt
+Dump event time:  2018/05/09 12:26:19
+Module load time: 2018/05/09 12:26:19
+Process ID: 22914
+Command line: node /home/davor/.nvm/versions/node/v8.11.1/bin/composer archive list -a basic-sample.bna 
+
+Node.js version: v8.11.1
+(http_parser: 2.8.0, v8: 6.2.414.50, uv: 1.19.1, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.25.0, openssl: 1.0.2o, icu: 60.1, unicode: 10.0,
+ cldr: 32.0, tz: 2017c)
+
+node-report version: 2.2.1 (built against Node.js v8.11.1, glibc 2.23, 64 bit)
+
+OS version: Linux 4.8.0-53-generic #56~16.04.1-Ubuntu SMP Tue May 16 01:18:56 UTC 2017
+(glibc: 2.23)
+
+Machine: davor-HP-250-G5-Notebook-PC x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+Object.parseArgs [as _parseArgs] (/home/davor/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.get [as argv] (/home/davor/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.<anonymous> (/home/davor/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/cli.js:1:1)
+Module._compile (module.js:1:1)
+Object.Module._extensions..js (module.js:1:1)
+Module.load (module.js:1:1)
+tryModuleLoad (module.js:1:1)
+Function.Module._load (module.js:1:1)
+Function.Module.runMain (module.js:1:1)
+startup (bootstrap_node.js:1:1)
+bootstrap_node.js:1:1
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x7fe6f9da156b] nodereport::OnUncaughtException(v8::Isolate*) [/home/davor/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0xf1c332] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [node]
+ 2: [pc=0x1094a5d] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 3: [pc=0x1ec7ccc042fd] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 33,554,432 bytes, committed memory: 16,429,560 bytes
+    Capacity: 16,498,688 bytes, used: 1,443,024 bytes, available: 15,055,664 bytes
+Heap space name: old_space
+    Memory size: 17,100,800 bytes, committed memory: 17,028,384 bytes
+    Capacity: 16,654,048 bytes, used: 15,345,424 bytes, available: 1,308,624 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,394,720 bytes
+    Capacity: 2,008,256 bytes, used: 1,312,256 bytes, available: 696,000 bytes
+Heap space name: map_space
+    Memory size: 1,593,344 bytes, committed memory: 1,243,496 bytes
+    Capacity: 1,557,648 bytes, used: 892,760 bytes, available: 664,888 bytes
+Heap space name: large_object_space
+    Memory size: 3,923,968 bytes, committed memory: 3,923,968 bytes
+    Capacity: 1,445,053,560 bytes, used: 3,868,280 bytes, available: 1,441,185,280 bytes
+
+Total heap memory size: 58,269,696 bytes
+Total heap committed memory: 40,020,128 bytes
+Total used heap memory: 22,861,744 bytes
+Total available heap memory: 1,458,910,456 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 0.820000 secs
+  Kernel mode CPU: 0.040000 secs
+  Average CPU Consumption : 86%
+  Maximum resident set size: 70,971,392 bytes
+  Page faults: 5 (I/O required) 16939 (no I/O required)
+  Filesystem activity: 1032 reads 16 writes
+
+Event loop thread resource usage:
+  User mode CPU: 0.736000 secs
+  Kernel mode CPU: 0.040000 secs
+  Average CPU Consumption : 77.6%
+  Filesystem activity: 1032 reads 16 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x00000000032ad0f0  
+[--]   check     0x00007ffdc63e0210  
+[R-]   idle      0x00007ffdc63e0288  
+[--]   prepare   0x00007ffdc63e0300  
+[--]   check     0x00007ffdc63e0378  
+[-A]   async     0x00000000021846a0  
+[-A]   async     0x0000000003368b00  
+[-A]   async     0x00000000033689e0  
+[R-]   timer     0x0000000003333e80  repeat: 0, timeout expired: 9225380 ms ago
+[R-]   tty       0x0000000003335448  width: 198, height: 54, file descriptor: 9, write queue size: 0, writable
+[-A]   signal    0x0000000003333f70  signum: 28 (SIGWINCH)
+[R-]   tty       0x0000000003334208  width: 198, height: 54, file descriptor: 11, write queue size: 0, writable
+[-A]   async     0x0000000003368a70  
+[-A]   async     0x00000000033346e0  
+[-A]   async     0x0000000003318a20  
+[-A]   async     0x000000000331e670  
+[-A]   async     0x000000000339c0c0  
+[-A]   async     0x0000000003357c10  
+[-A]   async     0x0000000003333240  
+[-A]   async     0x00000000033564d0  
+[-A]   async     0x0000000003355aa0  
+[-A]   async     0x00007fe6f9fa9cc0  
+[-A]   async     0x000000000336ece0  
+[-A]   async     0x000000000338e510  
+[-A]   async     0x00000000033561f0  
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  LC_PAPER=hr_HR.UTF-8
+  XDG_VTNR=7
+  MATE_DESKTOP_SESSION_ID=this-is-deprecated
+  SSH_AGENT_PID=1962
+  LC_ADDRESS=hr_HR.UTF-8
+  XDG_SESSION_ID=c2
+  LC_MONETARY=hr_HR.UTF-8
+  XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/davor
+  QT_STYLE_OVERRIDE=gtk
+  NVM_CD_FLAGS=
+  TERM=xterm
+  SHELL=/bin/bash
+  VTE_VERSION=4205
+  QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+  WINDOWID=67120040
+  LC_NUMERIC=hr_HR.UTF-8
+  GTK_MODULES=gail:atk-bridge
+  NVM_DIR=/home/davor/.nvm
+  USER=davor
+  LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+  QT_ACCESSIBILITY=1
+  CLUTTER_BACKEND=x11
+  LC_TELEPHONE=hr_HR.UTF-8
+  XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+  XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+  SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+  DEFAULTS_PATH=/usr/share/gconf/mate.default.path
+  SESSION_MANAGER=local/davor-HP-250-G5-Notebook-PC:@/tmp/.ICE-unix/1827,unix/davor-HP-250-G5-Notebook-PC:/tmp/.ICE-unix/1827
+  INSIDE_CAJA_PYTHON=
+  XDG_CONFIG_DIRS=/etc/xdg/xdg-mate:/etc/xdg
+  PATH=/home/davor/.nvm/versions/node/v8.11.1/bin:/home/davor/bin:/home/davor/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+  DESKTOP_SESSION=mate
+  LC_IDENTIFICATION=hr_HR.UTF-8
+  XDG_SESSION_TYPE=x11
+  PWD=/home/davor/Desktop/Project_1
+  LANG=en_US.UTF-8
+  GDM_LANG=en_US
+  MANDATORY_PATH=/usr/share/gconf/mate.mandatory.path
+  LC_MEASUREMENT=hr_HR.UTF-8
+  COMPIZ_CONFIG_PROFILE=mate
+  GDMSESSION=mate
+  XDG_SEAT=seat0
+  HOME=/home/davor
+  SHLVL=1
+  LANGUAGE=en_US
+  GTK_OVERLAY_SCROLLING=0
+  XDG_SESSION_DESKTOP=mate
+  LOGNAME=davor
+  XDG_DATA_DIRS=/usr/share/mate:/usr/local/share/:/usr/share/
+  DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-YJd07rHDj6,guid=9d10e1d050b4bfbf5d4a7b615af2a8e2
+  NVM_BIN=/home/davor/.nvm/versions/node/v8.11.1/bin
+  LESSOPEN=| /usr/bin/lesspipe %s
+  XDG_RUNTIME_DIR=/run/user/1000
+  DISPLAY=:0.0
+  XDG_CURRENT_DESKTOP=MATE
+  LESSCLOSE=/usr/bin/lesspipe %s %s
+  COLORTERM=mate-terminal
+  XAUTHORITY=/home/davor/.Xauthority
+  LC_NAME=hr_HR.UTF-8
+  _=/home/davor/.nvm/versions/node/v8.11.1/bin/composer
+  OLDPWD=/home/davor/Desktop/Project_1/fabric-tools
+  SUPPRESS_NO_CONFIG_WARNING=y
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)                 65536           65536
+  max memory size (kbytes)              unlimited       unlimited
+  open files                              1048576         1048576
+  stack size (bytes)                      8388608       unlimited
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                        30651           30651
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /lib/x86_64-linux-gnu/libdl.so.2
+  /lib/x86_64-linux-gnu/librt.so.1
+  /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+  /lib/x86_64-linux-gnu/libm.so.6
+  /lib/x86_64-linux-gnu/libgcc_s.so.1
+  /lib/x86_64-linux-gnu/libpthread.so.0
+  /lib/x86_64-linux-gnu/libc.so.6
+  /lib64/ld-linux-x86-64.so.2
+  /home/davor/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/node_modules/node-report/api.node
+
+================================================================================
